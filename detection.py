@@ -2,11 +2,6 @@ from __future__ import print_function
 import cv2 as cv
 import sys
 
-classifiers = {
-    "--face": "classifiers/haarcascade_frontalface_alt.xml",
-    "--eye": "classifiers/haarcascade_eye.xml"
-}
-
 def detectAndDisplay(frame):
     frame_gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
     frame_gray = cv.equalizeHist(frame_gray)
